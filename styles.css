@@ -69,3 +69,16 @@ footer { padding: 3rem 5vw; border-top: 1px solid var(--line); display: flex; ju
   html { scroll-behavior: auto; }
   .card { transition: none; }
 }
+.footer-links { display: flex; gap: 1.25rem; }
+.legal { padding: 10vh 8vw 9rem; }
+.legal h1 { font-size: clamp(4rem, 9vw, 8rem); max-width: 1000px; }
+.legal-updated { margin: 2rem 0 5rem; color: var(--moss); font-size: .85rem; }
+.legal-copy { max-width: 760px; margin-left: 24vw; }
+.legal-copy section { padding: 2rem 0; border-top: 1px solid var(--line); }
+.legal-copy h2 { font-family: "Newsreader", serif; font-size: clamp(1.8rem, 3vw, 2.7rem); letter-spacing: -.02em; margin-bottom: 1rem; }
+.legal-copy p { margin: 0; }
+@media (max-width: 800px) {
+  .footer-links { flex-direction: column; gap: .5rem; }
+  .legal { padding: 8vh 6vw 7rem; }
+  .legal-copy { margin-left: 0; }
+}
