@@ -425,3 +425,35 @@ body.enchanted footer { background: var(--night); color: var(--parchment); borde
   .specimen-plate figcaption { display: block; }
   .specimen-plate figcaption span { margin-bottom: .7rem; }
 }
+
+
+.no-pressure-note {
+  position: relative;
+  margin: 1.8rem 0 .7rem;
+  padding: 1.25rem 1.35rem 1.25rem 3rem;
+  border: 1px solid rgba(200,165,97,.48);
+  background: rgba(239,230,210,.07);
+}
+.no-pressure-note > span {
+  position: absolute;
+  left: 1.15rem;
+  top: 1.38rem;
+  color: var(--gold);
+}
+.no-pressure-note p { margin: 0; font-size: .98rem; }
+.no-pressure-note strong {
+  color: #f1d89a;
+  font-family: "Newsreader", serif;
+  font-size: 1.18rem;
+  font-weight: 400;
+}
+.consultation-note {
+  max-width: 500px;
+  margin-top: 1.4rem;
+  line-height: 1.55;
+}
+.consultation-note a {
+  color: var(--parchment);
+  text-decoration-color: var(--gold);
+  text-underline-offset: .2em;
+}
