@@ -399,3 +399,29 @@ body.enchanted footer { background: var(--night); color: var(--parchment); borde
   .specimen-plate img { max-height: 390px; object-position: center 38%; }
   .specimen-plate figcaption { padding: 1.35rem 1.5rem 1.7rem; }
 }
+
+
+/* Wider, unmistakably bottle-shaped specimen plate */
+.specimen-plate { display: block; }
+.specimen-plate img {
+  width: 100%;
+  max-height: none;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center;
+}
+.specimen-plate figcaption {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1.25rem;
+  align-items: baseline;
+  padding: 1.35rem 1.7rem 1.6rem;
+}
+.specimen-plate figcaption span { grid-row: 1 / span 2; margin: 0; }
+.specimen-plate figcaption strong { font-size: 1.55rem; }
+.specimen-plate figcaption small { margin-top: .35rem; }
+@media (max-width: 560px) {
+  .specimen-plate img { max-height: none; aspect-ratio: 3 / 2; object-position: center; }
+  .specimen-plate figcaption { display: block; }
+  .specimen-plate figcaption span { margin-bottom: .7rem; }
+}
