@@ -347,3 +347,55 @@ body.enchanted footer { background: var(--night); color: var(--parchment); borde
   color: var(--estuary);
   font: italic 400 1.08rem/1.55 "Newsreader", serif;
 }
+
+
+.specimen-plate {
+  margin: 2rem 0 2.5rem;
+  display: grid;
+  grid-template-columns: minmax(180px, .72fr) 1fr;
+  align-items: center;
+  background: #171914;
+  border: 1px solid var(--gold);
+  outline: 1px solid rgba(200,165,97,.35);
+  outline-offset: -7px;
+  box-shadow: 10px 14px 28px rgba(0,0,0,.18);
+  overflow: hidden;
+}
+.specimen-plate img {
+  display: block;
+  width: 100%;
+  max-height: 440px;
+  object-fit: cover;
+  object-position: center;
+}
+.specimen-plate figcaption {
+  padding: 2rem;
+  color: var(--parchment);
+  font-family: "Newsreader", serif;
+}
+.specimen-plate figcaption span {
+  display: block;
+  margin-bottom: .8rem;
+  color: var(--gold);
+  font: 600 .67rem "DM Sans", sans-serif;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.specimen-plate figcaption strong {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+.specimen-plate figcaption small {
+  display: block;
+  margin-top: .9rem;
+  color: rgba(239,230,210,.72);
+  font-style: italic;
+  line-height: 1.5;
+}
+@media (max-width: 560px) {
+  .specimen-plate { grid-template-columns: 1fr; }
+  .specimen-plate img { max-height: 390px; object-position: center 38%; }
+  .specimen-plate figcaption { padding: 1.35rem 1.5rem 1.7rem; }
+}
