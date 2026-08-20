@@ -252,3 +252,75 @@ body.enchanted footer { background: var(--night); color: var(--parchment); borde
   .specimen-tag { width: 96%; margin-left: 2%; }
   .cabinet-card:nth-child(2), .cabinet-card:nth-child(3) { transform: none; }
 }
+
+
+/* Field Note No. 001 — Contact Before Correction */
+.field-note { padding: clamp(2rem, 4vw, 3.5rem); }
+.field-note .note-lede {
+  font: 400 1.45rem/1.35 "Newsreader", serif;
+  color: var(--estuary);
+  margin-top: 1.4rem;
+}
+.field-note > p:not(.note-lede) {
+  font-family: "DM Sans", sans-serif;
+  font-size: .98rem;
+  line-height: 1.72;
+}
+.field-promise {
+  margin: 2.25rem 0;
+  padding: 1.6rem 0 1.6rem 1.5rem;
+  border-left: 2px solid var(--gold);
+  font: italic 400 clamp(1.6rem, 2.4vw, 2.25rem)/1.16 "Newsreader", serif;
+  color: var(--estuary);
+}
+.field-practice {
+  list-style: none;
+  counter-reset: field-step;
+  margin: 2rem 0;
+  padding: 0;
+  border-top: 1px solid rgba(25,53,59,.22);
+}
+.field-practice li {
+  counter-increment: field-step;
+  position: relative;
+  padding: 1rem 0 1rem 3.15rem;
+  border-bottom: 1px solid rgba(25,53,59,.22);
+  line-height: 1.55;
+}
+.field-practice li::before {
+  content: counter(field-step, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  color: var(--clay);
+  font: 500 .78rem "DM Sans", sans-serif;
+  letter-spacing: .08em;
+}
+.field-recognition {
+  margin: 2.2rem 0;
+  padding: 1.25rem 1.4rem;
+  background: var(--night);
+  color: var(--parchment);
+  border: 1px solid var(--gold);
+  font: 400 1.08rem/1.55 "Newsreader", serif;
+}
+.field-recognition strong { color: #f1d89a; font-weight: 400; font-size: 1.25rem; }
+.present-conditions {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  background: rgba(200,165,97,.11);
+  border: 1px dashed rgba(25,53,59,.34);
+}
+.present-conditions h4 {
+  margin: 0 0 1rem;
+  color: var(--estuary);
+  font: 400 1.55rem "Newsreader", serif;
+}
+.present-conditions p {
+  margin: .45rem 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: .88rem;
+}
+@media (min-width: 1100px) {
+  body.enchanted .writing-grid { grid-template-columns: .72fr 1.28fr; gap: 7vw; }
+}
