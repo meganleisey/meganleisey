@@ -457,3 +457,164 @@ body.enchanted footer { background: var(--night); color: var(--parchment); borde
   text-decoration-color: var(--gold);
   text-underline-offset: .2em;
 }
+
+
+/* Field Notes publishing system */
+.about-grid-single {
+  grid-template-columns: minmax(0, 760px);
+  justify-content: end;
+}
+.field-notes-preview,
+.field-notes-archive {
+  display: grid;
+  gap: 1.2rem;
+}
+.field-note-card {
+  padding: 1.7rem;
+  color: var(--estuary);
+  background:
+    repeating-linear-gradient(1deg, rgba(74,58,37,.025) 0 1px, transparent 1px 5px),
+    var(--parchment);
+  border: 1px solid var(--gold);
+  outline: 1px solid rgba(200,165,97,.35);
+  outline-offset: -7px;
+  box-shadow: 8px 12px 28px rgba(0,0,0,.14);
+}
+.field-note-card:nth-child(even) { transform: rotate(-.25deg); }
+.field-note-card-meta {
+  margin: 0;
+  color: var(--clay);
+  font: 600 .68rem "DM Sans", sans-serif;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.field-note-card h3 {
+  margin: .8rem 0;
+  font: 400 clamp(1.9rem, 3vw, 2.8rem)/1.05 "Newsreader", serif;
+}
+.field-note-card h3 a { text-decoration: none; }
+.field-note-card > p:not(.field-note-card-meta) {
+  margin: 0;
+  font: 400 1rem/1.65 "DM Sans", sans-serif;
+}
+.field-note-card-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.4rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(25,53,59,.2);
+  font-size: .82rem;
+}
+.field-note-card-footer a { text-underline-offset: .22em; }
+.field-notes-all-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: var(--parchment);
+}
+.field-notes-message {
+  font-family: "Newsreader", serif;
+  font-size: 1.25rem;
+  font-style: italic;
+}
+.field-notes-hero {
+  padding: 12vh 8vw 8rem;
+  color: var(--parchment);
+  background:
+    linear-gradient(90deg, rgba(16,43,49,.98), rgba(16,43,49,.78)),
+    url('/assets/enchanted-field-archive.webp') center/cover no-repeat;
+  border-bottom: 1px solid var(--gold);
+}
+.field-notes-hero h1 {
+  font-size: clamp(4rem, 10vw, 9rem);
+}
+.field-notes-hero > p:last-child {
+  max-width: 640px;
+  margin: 2rem 0 0 24vw;
+  font: 400 clamp(1.05rem, 1.6vw, 1.3rem)/1.6 "DM Sans", sans-serif;
+}
+.field-notes-archive-section {
+  min-height: 60vh;
+  padding: 7rem 8vw 10rem;
+  background:
+    radial-gradient(circle at 4% 30%, rgba(120,130,122,.16), transparent 22rem),
+    var(--parchment);
+}
+.field-notes-archive {
+  max-width: 880px;
+  margin: 0 auto;
+}
+.field-note-page {
+  min-height: 75vh;
+  padding: 4rem 8vw 9rem;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(200,165,97,.15), transparent 20rem),
+    var(--parchment);
+}
+.field-note-back {
+  display: inline-block;
+  margin-bottom: 3rem;
+  font-size: .84rem;
+  text-underline-offset: .22em;
+}
+.field-note-detail {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: clamp(2rem, 6vw, 5rem);
+  color: var(--estuary);
+  background:
+    repeating-linear-gradient(1deg, rgba(74,58,37,.025) 0 1px, transparent 1px 5px),
+    #f7efde;
+  border: 1px solid var(--gold);
+  outline: 1px solid rgba(200,165,97,.34);
+  outline-offset: -8px;
+  box-shadow: 14px 20px 45px rgba(16,43,49,.14);
+}
+.field-note-detail h1 {
+  margin-top: 1rem;
+  font-size: clamp(3.4rem, 8vw, 7rem);
+}
+.note-date {
+  margin: 1.2rem 0 2.5rem;
+  color: var(--clay);
+  font-size: .84rem;
+}
+.field-note-image {
+  margin: 2.5rem 0;
+  border: 1px solid var(--gold);
+  background: #171914;
+}
+.field-note-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+.field-note-body {
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+.field-note-body h2,
+.field-note-body h3,
+.field-note-body h4 {
+  margin: 2.5rem 0 1rem;
+  font-family: "Newsreader", serif;
+  font-weight: 400;
+  line-height: 1.12;
+}
+.field-note-body h2 { font-size: 2.5rem; }
+.field-note-body h3 { font-size: 2rem; }
+.field-note-body h4 { font-size: 1.55rem; }
+.field-note-body a { text-underline-offset: .22em; }
+.field-note-detail .present-conditions h2 {
+  font-size: 1.55rem;
+  letter-spacing: 0;
+}
+@media (max-width: 800px) {
+  .about-grid-single { justify-content: stretch; }
+  .field-notes-hero,
+  .field-notes-archive-section,
+  .field-note-page { padding-inline: 6vw; }
+  .field-notes-hero > p:last-child { margin-left: 0; }
+  .field-note-card-footer { flex-direction: column; }
+}
