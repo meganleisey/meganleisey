@@ -1,0 +1,85 @@
+media:
+  input: assets/field-notes
+  output: /assets/field-notes
+  rename: safe
+  categories: [image]
+
+content:
+  - name: field_notes
+    label: Field Notes
+    type: file
+    path: field-notes/notes.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - name: published
+        label: Published
+        type: boolean
+        default: false
+        description: Leave this off while writing. Turn it on only when the note feels ready to appear on the website.
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: slug
+        label: Web address
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9-]+$"
+          message: Use lowercase words separated by hyphens.
+        description: Example: the-body-moved-first
+      - name: number
+        label: Field Note number
+        type: string
+        required: true
+        description: Example: 002
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: category
+        label: Observation type
+        type: string
+        description: Example: Somatic observation
+      - name: summary
+        label: Short introduction
+        type: text
+        required: true
+        description: A few sentences that will appear in the Field Notes list.
+      - name: image
+        label: Optional image
+        type: image
+      - name: imageAlt
+        label: Image description
+        type: string
+        description: Describe the image for someone who cannot see it.
+      - name: body
+        label: Field Note
+        type: rich-text
+        required: true
+      - name: recognition
+        label: Field recognition
+        type: text
+        description: The clearest recognition that emerged. Optional.
+      - name: filedUnder
+        label: Filed under
+        type: string
+        description: Separate themes with a middle dot, for example Contact · perception · choice.
+      - name: status
+        label: Current status
+        type: string
+        default: Still alive in the field 🌿
+      - name: location
+        label: Location
+        type: string
+        default: Ordinary life
+
+settings:
+  hide: true
+  commit:
+    identity: user
+    templates:
+      update: "Update Field Notes"
