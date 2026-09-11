@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
+  <script src="/field-notes.js" defer></script>
 </head>
 <body class="enchanted">
   <header class="site-header">
@@ -66,8 +67,7 @@
     <section class="about" id="about">
       <div class="about-atmosphere" aria-hidden="true"></div>
       <p class="section-number">II / About the host</p>
-      <div class="about-grid">
-        <h2>I create the room—and I get to be inside it too.</h2>
+      <div class="about-grid about-grid-single">
         <div class="about-copy">
           <p class="dropcap">I have always been drawn to the quality of contact: the moment someone feels genuinely seen, heard, and understood without being turned into a problem or a project.</p>
           <p>I host through attention, curiosity, warmth, and a willingness to stay with what is actually here. I may notice a pattern, ask a question, or offer language for something that has been difficult to name—but I am not here to stand at the front of the room or become the authority on anyone else’s experience.</p>
@@ -140,32 +140,10 @@
         </div>
         <div class="writing-intro">
           <p>These entries begin as lived moments: something felt, a pattern noticed, a hidden rule revealing itself. They are not lessons or prescriptions. They are traces of what became visible through contact, curiosity, and ordinary life.</p>
-          <article class="note-placeholder field-note">
-            <span>Field Note No. 001 · Somatic observation</span>
-            <h3>The Body Moved First</h3>
-            <figure class="specimen-plate">
-              <img src="/assets/specimen-001-red-bottle-v2.webp" alt="Watercolor field-guide illustration of a red and navy water bottle with a small spiderweb emblem, surrounded by ferns, stars, and observation marks">
-              <figcaption><span>Specimen No. 001</span><strong>Red drinking vessel</strong><small>Observed at $27.99 · Later sighted at $76.96</small></figcaption>
-            </figure>
-            <p class="note-lede">A school cup was on sale. The visible question was simple: order it or wait? But before the decision became a story, the body had already responded.</p>
-            <p>Saying the problem aloud revealed the missing moment. The urgency did not begin with a thought. The thought arrived carrying the force of a body that had already mobilized.</p>
-            <blockquote class="field-promise">What if the moment that changes everything happens before the story—when your body first responds to the problem?</blockquote>
-            <ol class="field-practice">
-              <li><b>Say the problem aloud.</b></li>
-              <li><b>Notice the first place your body responds or mobilizes.</b></li>
-              <li><b>Stay in contact</b> without changing your breath, calming yourself, interpreting the sensation, or asking it to leave.</li>
-              <li><b>Notice what becomes visible</b> before deciding whether anything needs to be done.</li>
-            </ol>
-            <p>The practice is not to become calm or unaffected. It is to remain with yourself at the first point of contact. Feeling into the response can change what the mind was trying to change through management.</p>
-            <div class="field-recognition">✦ Field recognition<br><strong>The body moved first. Contact—not correction—created the change.</strong></div>
-            <div class="present-conditions">
-              <h4>Present Conditions ☕📖☾</h4>
-              <p><b>Specimen under observation:</b> What happens in the body when a problem is spoken aloud</p>
-              <p><b>Filed under:</b> Contact · mobilization · perception · self-relationship</p>
-              <p><b>Current status:</b> Still alive in the field 🌿</p>
-            </div>
-            <div class="note-meta">Location: ordinary life　·　Initial specimen: a school cup on sale</div>
-          </article>
+          <div id="field-notes-list" class="field-notes-preview" aria-live="polite">
+            <p class="field-notes-message">Gathering the Field Notes…</p>
+          </div>
+          <a class="text-link field-notes-all-link" href="/field-notes/">View all Field Notes <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
