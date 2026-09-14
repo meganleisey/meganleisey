@@ -134,6 +134,7 @@
     }
 
     document.title = `${note.title} — Megan Leisey`;
+    const subject = encodeURIComponent(`Writing back: ${note.title}`);
     target.innerHTML = `
       <article class="field-note field-note-detail">
         <p class="field-note-card-meta">Field Note No. ${escapeHtml(note.number)}${note.category ? ` · ${escapeHtml(note.category)}` : ""}</p>
@@ -149,6 +150,10 @@
           ${note.status ? `<p><b>Current status:</b> ${escapeHtml(note.status)}</p>` : ""}
         </div>
         ${note.location ? `<div class="note-meta">Location: ${escapeHtml(note.location)}</div>` : ""}
+        <div class="no-pressure-note">
+          <span aria-hidden="true">✦</span>
+          <p><strong>Did this stir something in you?</strong><br>The page stays quiet, but you can <a href="mailto:meganleisey@gmail.com?subject=${subject}">write back to me privately</a>.</p>
+        </div>
       </article>`;
   };
 
