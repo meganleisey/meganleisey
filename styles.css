@@ -618,3 +618,17 @@ body.enchanted footer { background: var(--night); color: var(--parchment); borde
   .field-notes-hero > p:last-child { margin-left: 0; }
   .field-note-card-footer { flex-direction: column; }
 }
+
+/* A life of little wonders — personal morning photographs */
+.morning-gallery { padding: 7rem 8vw 8rem; background: #f7f0e4; }
+.morning-gallery-heading { max-width: 760px; margin-bottom: 3rem; }
+.morning-gallery-heading h2 { font-size: clamp(2.7rem, 5.5vw, 5.5rem); margin: 1rem 0; }
+.morning-gallery-heading > p:last-child { max-width: 580px; font-size: 1.08rem; }
+.moment-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.2rem; align-items: start; }
+.moment { margin: 0; background: #e9ddcd; padding: .6rem .6rem 1.1rem; box-shadow: 0 8px 26px rgba(50,40,28,.11); }
+.moment-large { grid-column: span 2; grid-row: span 2; }
+.moment img { display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+.moment-large img { aspect-ratio: 4/4.4; }
+.moment figcaption { padding: .75rem .5rem 0; font: italic 1.3rem "Newsreader",serif; color: #5c584b; }
+.moment[hidden] { display: none; }
+@media(max-width:800px) { .morning-gallery { padding: 5rem 6vw; } .moment-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: .7rem; } .moment-large { grid-column: span 2; grid-row: auto; } .moment-large img { aspect-ratio: 4/3.7; } .moment figcaption { font-size: 1.1rem; } }
