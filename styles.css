@@ -632,3 +632,18 @@ body.enchanted footer { background: var(--night); color: var(--parchment); borde
 .moment figcaption { padding: .75rem .5rem 0; font: italic 1.3rem "Newsreader",serif; color: #5c584b; }
 .moment[hidden] { display: none; }
 @media(max-width:800px) { .morning-gallery { padding: 5rem 6vw; } .moment-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: .7rem; } .moment-large { grid-column: span 2; grid-row: auto; } .moment-large img { aspect-ratio: 4/3.7; } .moment figcaption { font-size: 1.1rem; } }
+
+
+/* Recent recognitions — field notes */
+.recent-notes { padding: 7rem 8vw 7.5rem; background: #efe5d5; color: #19353b; }
+.recent-notes-intro { max-width: 760px; margin: 0 auto 3.5rem; text-align: center; }
+.recent-notes-intro h2 { font: 400 clamp(2.7rem,5.5vw,5.5rem)/1.06 "Newsreader",serif; margin: 1rem 0 1.5rem; }
+.recent-notes-intro > p:last-child { font-size: 1.08rem; line-height: 1.8; }
+.recent-notes-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.2rem; max-width: 1080px; margin: auto; }
+.recent-note { padding: clamp(1.6rem,3.5vw,3rem); border: 1px solid rgba(87,78,58,.23); background: #f8f1e5; box-shadow: 0 7px 25px rgba(40,40,30,.04); }
+.recent-note > span { font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: #8b7655; }
+.recent-note h3 { font: 400 clamp(1.8rem,2.8vw,2.6rem)/1.1 "Newsreader",serif; margin: 1.2rem 0; }
+.recent-note p { line-height: 1.75; }
+.recent-note-line { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(87,78,58,.18); font: italic 1.25rem/1.4 "Newsreader",serif; }
+.recent-notes-outro { max-width: 650px; margin: 3.5rem auto 0; text-align: center; font: italic clamp(1.3rem,2.3vw,1.8rem)/1.5 "Newsreader",serif; }
+@media(max-width:800px) { .recent-notes { padding: 5rem 6vw; } .recent-notes-grid { grid-template-columns: 1fr; } }
